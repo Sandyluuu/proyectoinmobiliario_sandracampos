@@ -80,3 +80,4 @@ gem "devise", "~> 4.9"
 gem 'pagy'
 
 gem 'i18n'
+
