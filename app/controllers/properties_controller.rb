@@ -1,6 +1,8 @@
 class PropertiesController < ApplicationController
   include Pagy::Backend
-  before_action :set_property, only: %i[ show edit update destroy ]
+    before_action :authenticate_user!, except: :new
+    # Resto de las acciones y métodos del controlador
+    before_action :set_property, only: %i[ show edit update destroy ]
 
   # GET /properties or /properties.json
   def index

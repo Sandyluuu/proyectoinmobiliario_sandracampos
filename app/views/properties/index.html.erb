@@ -1,21 +1,30 @@
-<p style="color: green"><%= notice %></p>
 
-<h1>Propiedades</h1>
+<%= link_to "Nueva propiedad", new_property_path, class: "btn btn-primary mb-3" %>
 
-<%= link_to "New property", new_property_path %>
+<div class="container mt-4">
+  <div class="row">
+   
+      <p class="text-success"><%= notice %></p>
+      <h1 class="mb-4">Propiedades</h1>
 
-<div id="properties">
+      <div id="properties">
+        <% @properties.each_slice(2) do |property_group| %>
+          <div class="row mb-4">
+            <% property_group.each do |property| %>
+              <div class="col">
+                <%= render property %>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
 
-<div class="container">
-  <% @properties.each do |property| %>
-    <%= render property %>
-  <% end %>
-
-  <div class="pagination justify-content-center">
-    <%== pagy_nav(@pagy) %>
+        <div class="d-flex justify-content-center mt-3">
+              <%== pagy_nav(@pagy) %>
+        </div>
+      </div>
+    
   </div>
 </div>
-
 
 
 
