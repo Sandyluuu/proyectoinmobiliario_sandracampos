@@ -1,34 +1,12 @@
-<div id="<%= dom_id property %>">
-<%= image_tag property.image_url %>
-
-  <p>
-    <strong>Property type:</strong>
-    <%= property.property_type %>
-  </p>
-
-  <p>
-    <strong>Operation type:</strong>
-    <%= property.operation_type %>
-  </p>
-
-  <p>
-    <strong>Square meters:</strong>
-    <%= property.square_meters %>
-  </p>
-
-  <p>
-    <strong>Address:</strong>
-    <%= property.address %>
-  </p>
-
-  <p>
-    <strong>Contact:</strong>
-    <%= property.contact %>
-  </p>
-
-  <%# <p>
-    <strong>Image url:</strong>
-    <%= property.image_url %>
-  <%# </p> %>
-
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title"><%= property.property_type %></h5>
+    <p class="card-text"><strong>Operation type:</strong> <%= property.operation_type %></p>
+    <p class="card-text"><strong>Square meters:</strong> <%= property.square_meters %></p>
+    <p class="card-text"><strong>Address:</strong> <%= property.address %></p>
+    <p class="card-text"><strong>Contact:</strong> <%= property.contact %></p>
+    <%# <p class="card-text">
+      <strong>Image url:</strong> <%= property.image_url %>
+    <%# </p> %>
+  </div>
 </div>

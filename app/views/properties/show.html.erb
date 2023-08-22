@@ -1,8 +1,8 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @property %>
+<%= image_tag @property.image_url %>
 
-<%# <%= image_tag @property.image_url, alt: 'property.address' %> 
+<%= render @property %>
 
 <div>
   <%= link_to "Edit this property", edit_property_path(@property) %> |

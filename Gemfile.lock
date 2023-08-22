@@ -232,6 +232,7 @@ DEPENDENCIES
   debug
   devise (~> 4.9)
   faker
+  i18n
   importmap-rails
   jbuilder
   pagy

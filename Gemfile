@@ -44,7 +44,6 @@ gem "bootsnap", require: false
 
 gem 'faker'
 
-gem 'pagy'
 
 
 # Use Sass to process CSS
@@ -77,3 +76,7 @@ group :test do
 end
 
 gem "devise", "~> 4.9"
+
+gem 'pagy'
+
+gem 'i18n'
