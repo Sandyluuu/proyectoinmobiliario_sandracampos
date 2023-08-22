@@ -1,9 +1,13 @@
-<h1>New property</h1>
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <h1 class="mb-4">Nueva propiedad</h1>
 
-<%= render "form", property: @property %>
+      <%= render "form", property: @property %>
 
-<br>
-
-<div>
-  <%= link_to "Back to properties", properties_path %>
+      <div class="mt-3">
+        <%= link_to "Volver a las propiedades", properties_path, class: "btn btn-secondary" %>
+      </div>
+    </div>
+  </div>
 </div>
