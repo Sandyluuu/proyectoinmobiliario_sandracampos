@@ -2,6 +2,8 @@
 
 <h1>Properties</h1>
 
+<%= link_to "New property", new_property_path %>
+
 <div id="properties">
   <% @properties.each do |property| %>
     <%= render property %>
@@ -9,6 +11,8 @@
       <%= link_to "Show this property", property %>
     </p>
   <% end %>
+
+      <%# <%= pagy_nav @pagy %>
+
 </div>
 
-<%= link_to "New property", new_property_path %>

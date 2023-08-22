@@ -11,14 +11,16 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :property_type, style: "display: block" %>
-    <%= form.text_field :property_type %>
-  </div>
+  
+    <div class="field">
+      <%= form.label :property_type %>
+      <%= form.select :property_type, options_for_select(['Departamento', 'Casa']) %>
+    </div>
+ 
 
   <div>
     <%= form.label :operation_type, style: "display: block" %>
-    <%= form.text_field :operation_type %>
+    <%= form.select :operation_type, options_for_select(['Arriendo', 'Compra', 'Venta']) %>
   </div>
 
   <div>

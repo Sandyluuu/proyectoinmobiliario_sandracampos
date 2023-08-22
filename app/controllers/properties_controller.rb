@@ -1,9 +1,11 @@
 class PropertiesController < ApplicationController
+  include Pagy::Backend
   before_action :set_property, only: %i[ show edit update destroy ]
 
   # GET /properties or /properties.json
   def index
-    @properties = Property.all
+    # @properties = Property.all
+    @pagy, @properties = pagy(Property.all, items: 10)
   end
 
   # GET /properties/1 or /properties/1.json

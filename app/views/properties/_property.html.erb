@@ -1,4 +1,6 @@
 <div id="<%= dom_id property %>">
+<%= image_tag property.image_url %>
+
   <p>
     <strong>Property type:</strong>
     <%= property.property_type %>
@@ -24,9 +26,9 @@
     <%= property.contact %>
   </p>
 
-  <p>
+  <%# <p>
     <strong>Image url:</strong>
     <%= property.image_url %>
-  </p>
+  <%# </p> %>
 
 </div>
