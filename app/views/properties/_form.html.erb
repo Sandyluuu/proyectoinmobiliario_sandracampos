@@ -1,49 +1,47 @@
 <%= form_with(model: property) do |form| %>
   <% if property.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(property.errors.count, "error") %> prohibited this property from being saved:</h2>
+    <div class="alert alert-danger">
+      <h2><%= pluralize(property.errors.count, "error") %> impidieron que esta propiedad se guardara:</h2>
 
       <ul>
-        <% property.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+        <% property.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
 
-  
-    <div class="field">
-      <%= form.label :property_type %>
-      <%= form.select :property_type, options_for_select(['Departamento', 'Casa']) %>
-    </div>
- 
-
-  <div>
-    <%= form.label :operation_type, style: "display: block" %>
-    <%= form.select :operation_type, options_for_select(['Arriendo', 'Compra', 'Venta']) %>
+  <div class="form-group">
+    <%= form.label :property_type %>
+    <%= form.select :property_type, options_for_select(['Departamento', 'Casa']), class: "form-control" %>
   </div>
 
-  <div>
-    <%= form.label :square_meters, style: "display: block" %>
-    <%= form.text_field :square_meters %>
+  <div class="form-group">
+    <%= form.label :operation_type %>
+    <%= form.select :operation_type, options_for_select(['Arriendo', 'Compra', 'Venta']), class: "form-control" %>
   </div>
 
-  <div>
-    <%= form.label :address, style: "display: block" %>
-    <%= form.text_field :address %>
+  <div class="form-group">
+    <%= form.label :square_meters %>
+    <%= form.text_field :square_meters, class: "form-control" %>
   </div>
 
-  <div>
-    <%= form.label :contact, style: "display: block" %>
-    <%= form.text_field :contact %>
+  <div class="form-group">
+    <%= form.label :address %>
+    <%= form.text_field :address, class: "form-control" %>
   </div>
 
-  <div>
-    <%= form.label :image_url, style: "display: block" %>
-    <%= form.text_field :image_url %>
+  <div class="form-group">
+    <%= form.label :contact %>
+    <%= form.text_field :contact, class: "form-control" %>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="form-group">
+    <%= form.label :image_url %>
+    <%= form.text_field :image_url, class: "form-control" %>
+  </div>
+
+  <div class="text-center">
+    <%= form.submit "Guardar", class: "btn btn-primary" %>
   </div>
 <% end %>

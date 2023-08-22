@@ -11,13 +11,13 @@ User.create(email: 'operador2@gmail.com', password: '931SDABA988')
 property_types = ["Casa", "Departamento"]
 operation_types = ["Arriendo", "Compra", "Venta"]
 
-20.times do
+25.times do
   Property.create(
     property_type: property_types.sample,
     operation_type: operation_types.sample,
     square_meters: Faker::Number.decimal(l_digits: 2),
     address: Faker::Address.full_address,
-    contact: Faker::PhoneNumber.phone_number,
+    contact: Faker::PhoneNumber.phone_number, 
     image_url: 'https://loremflickr.com/620/440/building'
 )
 end
